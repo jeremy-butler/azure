@@ -30,6 +30,7 @@ $resources = Get-AzResource
 foreach ($resource in $resources) {
     $resourceType = $resource.ResourceType
     $resourceId = $resource.ResourceId
+    
     $resourceDetails += [PSCustomObject]@{
         Name             = $resource.Name
         ResourceGroup    = $resource.ResourceGroupName
